@@ -40,7 +40,7 @@ def test_cube_positive(simple_math):
     assert simple_math.cube(2) == 8
 
 def test_cube_negative(simple_math):
-    assert simple_math.cube(-2) == -8
+    assert simple_math.cube(-3) == -27
 
 def test_cube_0(simple_math):
     assert simple_math.cube(0) == 0
