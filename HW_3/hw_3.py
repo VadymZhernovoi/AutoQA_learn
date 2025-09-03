@@ -1,6 +1,4 @@
 """
-Написать автотест с использованием Python и Pytest, который:
-
 1. Открывает https://itcareerhub.de/ru
 2. Проверяет, что на странице отображаются:
     Логитип ITCareerHub
@@ -76,14 +74,14 @@ def test_link_reviews_is_displayed(driver):
 
 def test_button_language_ru_is_displayed(driver):
     """
-    Проверяет, что на странице отображаются Ссылка “Отзывы”
+    Проверяет, что на странице отображаются Кнопка переключения языка ru
     """
     button_language_ru = driver.find_element(By.LINK_TEXT, "ru")
     assert button_language_ru.is_displayed() == True
 
 def test_button_language_de_is_displayed(driver):
     """
-    Проверяет, что на странице отображаются Ссылка “Отзывы”
+    Проверяет, что на странице отображаются Кнопка переключения языка de
     """
     button_language_de = driver.find_element(By.LINK_TEXT, "de")
     assert button_language_de.is_displayed() == True
