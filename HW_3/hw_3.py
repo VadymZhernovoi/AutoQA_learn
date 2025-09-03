@@ -33,7 +33,7 @@ def test_logo_is_displayed(driver):
     """
     Проверяет, что на странице отображаются Логoтип ITCareerHub
     """
-    logo_img = driver.find_element(By.CSS_SELECTOR, ".tn-atom__img:nth-child(1)")
+    logo_img = driver.find_element(By.XPATH, "(//img[@class='tn-atom__img t-img loaded'])[1]")
     assert logo_img.is_displayed() == True
 
 
@@ -93,7 +93,8 @@ def test_button_telefone_text_after_click(driver):
     Кликнуть по иконке с телефонной трубкой
     Проверить что текст “Если вы не дозвонились, заполните форму на сайте. Мы свяжемся с вами” отображается.
     """
-    button_telefone = driver.find_element(By.CSS_SELECTOR, ".tn-atom__img:nth-child(1)")
+    #button_telefone = driver.find_element(By.CSS_SELECTOR, ".tn-atom__img:nth-child(1)")
+    button_telefone = driver.find_element(By.XPATH, "(//img[@class='tn-atom__img t-img loaded'])[2]")
     button_telefone.click()
     sleep(5)
     button_telefone_text_after_click = driver.find_element(By.XPATH, "//*[contains(., 'Если вы не дозвонились, заполните форму на сайте. Мы свяжемся с вами')]")
