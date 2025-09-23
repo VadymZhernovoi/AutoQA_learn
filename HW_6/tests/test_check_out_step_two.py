@@ -63,5 +63,6 @@ def test_check_6_items(driver):
     check_out_step_two.get_summary_total()
     assert check_out_step_two.get_summary_total() == Decimal("58.29")
 
+    check_out_step_two.click_finish_button()
 
-    sleep(3)
+    # sleep(3)

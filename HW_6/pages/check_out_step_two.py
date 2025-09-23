@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 
 class CheckOutStepTwo:
     SUMMARY_TOTAL = (By.CLASS_NAME, "summary_total_label")
+    FINISH_BUTTON = (By.ID, "finish")
 
     def __init__(self, driver):
         self.driver = driver
@@ -17,6 +18,8 @@ class CheckOutStepTwo:
 
         return Decimal(amount_str)
 
+    def click_finish_button(self):
+        self.driver.find_element(*self.FINISH_BUTTON).click()
 
 
 
