@@ -34,7 +34,7 @@ def test_invalid_username_valid_password(driver):
     login_page.set_password("secret_sauce")
     login_page.click_login_button()
 
-    assert login_page.error_box_iis_displayed()
+    assert login_page.error_box_is_displayed()
     assert "Username and password do not match any user in this service" in login_page.check_login_status()
 
 def test_valid_username_invalid_password(driver):
@@ -43,7 +43,7 @@ def test_valid_username_invalid_password(driver):
     login_page.set_password("<xcv<dvsauce")
     login_page.click_login_button()
 
-    assert login_page.error_box_iis_displayed()
+    assert login_page.error_box_is_displayed()
     assert "Username and password do not match any user in this service" in login_page.check_login_status()
 
 def test_empty_username(driver):
